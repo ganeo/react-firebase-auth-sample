@@ -72,6 +72,11 @@ hr {
   margin-top: 30px;
 }
 
+.home p {
+  font-size: 2rem;
+  color: white;
+}
+
 @media screen and (max-width: 720px) {
   .top {
     flex-direction: column;
