@@ -1,4 +1,4 @@
-.top {
+.wrap-top {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,14 +7,14 @@
   min-height: 100vh;
 }
 
-.login {
+.wrap-login {
   min-width: 30%;
   height: 350px;
   margin: 10px;
   background-color: aliceblue;
 }
 
-.signup-with-email {
+.wrap-signup {
   min-width: 30%;
   height: 350px;
   margin: 10px;
@@ -47,7 +47,7 @@ button {
   border-radius: 5px;
 }
 
-.button-google {
+.btn-google {
   margin-top: 20px;
 }
 
@@ -55,7 +55,7 @@ button:hover {
   opacity: 0.8;
 }
 
-.home {
+.wrap-home {
   text-align: center;
   margin-top: 50px;
 }
@@ -72,13 +72,13 @@ hr {
   margin-top: 30px;
 }
 
-.home p {
+.wrap-home p {
   font-size: 2rem;
   color: white;
 }
 
 @media screen and (max-width: 720px) {
-  .top {
+  .wrap-top {
     flex-direction: column;
   }
 }

@@ -6,8 +6,8 @@ import SignupWithEmail from '../components/SignupWithEmail'
 
 const Top: React.FC = () => {
   return (
-    <div className='top'>
-      <div className='login'>
+    <div className='wrap-top'>
+      <div className='wrap-login'>
         <div>
           <LoginWithEmail />
         </div>
@@ -16,7 +16,7 @@ const Top: React.FC = () => {
           <LoginWithGoogle />
         </div>
       </div>
-      <div className='signup-with-email'>
+      <div className='wrap-signup'>
         <SignupWithEmail />
       </div>
     </div>
