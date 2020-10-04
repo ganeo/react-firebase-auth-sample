@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from 'react'
+import React, { useCallback } from 'react'
 import { withRouter, RouteComponentProps } from 'react-router-dom'
 import { loginWithGoogle } from '../firebase'
 import paths from '../paths'
