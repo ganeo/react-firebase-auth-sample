@@ -7,12 +7,8 @@ const LoginWithGoogle: React.FC<RouteComponentProps> = ({ history }) => {
   const handleSubmit = useCallback(
     async (event) => {
       event.preventDefault()
-      try {
-        await loginWithGoogle()
-        history.push(paths.home)
-      } catch (error) {
-        alert(error)
-      }
+      await loginWithGoogle()
+      history.push(paths.home)
     },
     [history]
   )

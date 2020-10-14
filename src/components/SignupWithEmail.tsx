@@ -8,12 +8,9 @@ const SignupWithEmail: React.FC<RouteComponentProps> = ({ history }) => {
     async (event) => {
       event.preventDefault()
       const { email, password } = event.target.elements
-      try {
-        await signupWithEmail(email.value, password.value)
-        history.push(paths.home)
-      } catch (error) {
-        alert(error)
-      }
+      await signupWithEmail(email.value, password.value)
+      history.push(paths.home)
+
     },
     [history]
   )

@@ -13,16 +13,28 @@ export const app = firebase.initializeApp({
 })
 
 export const loginWithEmail = async (email: string, password: string) => {
-  await app.auth().signInWithEmailAndPassword(email, password)
+  try {
+    await app.auth().signInWithEmailAndPassword(email, password)
+  } catch (error) {
+    alert(error)
+  }
 }
 
 export const loginWithGoogle = async () => {
   const provider = new firebase.auth.GoogleAuthProvider()
-  await firebase.auth().signInWithPopup(provider)
+  try {
+    await firebase.auth().signInWithPopup(provider)
+  } catch (error) {
+    alert(error)
+  }
 }
 
 export const signupWithEmail = async (email: string, password: string) => {
-  await app.auth().createUserWithEmailAndPassword(email, password)
+  try {
+    await app.auth().createUserWithEmailAndPassword(email, password)
+  } catch (error) {
+    alert(error)
+  }
 }
 
 export const logout = () => {

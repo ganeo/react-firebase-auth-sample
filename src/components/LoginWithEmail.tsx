@@ -8,12 +8,8 @@ const LoginWithEmail: React.FC<RouteComponentProps> = ({ history }) => {
     async (event) => {
       event.preventDefault()
       const { email, password } = event.target.elements
-      try {
-        await loginWithEmail(email.value, password.value)
-        history.push(paths.home)
-      } catch (error) {
-        alert(error)
-      }
+      await loginWithEmail(email.value, password.value)
+      history.push(paths.home)
     },
     [history]
   )
