@@ -1,10 +1,18 @@
-import React from 'react'
-import { withRouter } from 'react-router-dom'
+import React, { useContext, useEffect } from 'react'
+import { withRouter, RouteComponentProps } from 'react-router-dom'
 import LoginWithEmail from '../components/LoginWithEmail'
 import LoginWithGoogle from '../components/LoginWithGoogle'
 import SignupWithEmail from '../components/SignupWithEmail'
+import { FirebaseContext } from '../contexts'
+import paths from '../paths'
 
-const Top: React.FC = () => {
+const Top: React.FC<RouteComponentProps> = ({ history }) => {
+  const { user } = useContext(FirebaseContext)
+
+  useEffect(() => {
+    user && history.push(paths.home)
+  }, [history])
+
   return (
     <div className='wrap-top'>
       <div className='wrap-login'>
