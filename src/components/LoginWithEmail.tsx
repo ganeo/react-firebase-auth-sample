@@ -16,7 +16,9 @@ const LoginWithEmail: React.FC<RouteComponentProps> = ({ history }) => {
 
   return (
     <>
-      <h1>ログイン</h1>
+      <div className='header-auth'>
+        <span>ログイン</span>
+      </div>
       <form onSubmit={handleSubmit}>
         <div>
           <input name='email' type='email' placeholder='Eメール' />

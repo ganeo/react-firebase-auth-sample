@@ -10,14 +10,15 @@ const SignupWithEmail: React.FC<RouteComponentProps> = ({ history }) => {
       const { email, password } = event.target.elements
       await signupWithEmail(email.value, password.value)
       history.push(paths.home)
-
     },
     [history]
   )
 
   return (
     <>
-      <h1>サインアップ</h1>
+      <div className='header-auth'>
+        <span>サインアップ</span>
+      </div>
       <form onSubmit={handleSubmit}>
         <div>
           <input name='email' type='email' placeholder='Eメール' />

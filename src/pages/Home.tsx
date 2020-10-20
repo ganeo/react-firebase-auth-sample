@@ -7,7 +7,9 @@ const Home = () => {
 
   return (
     <>
-      <h1>Home(要ログイン)</h1>
+      <header className='header-page'>
+        <h1>Home(要ログイン)</h1>
+      </header>
       <div className='wrap-home'>
         <p>{user?.email}でログインしています。</p>
         <button onClick={logout}>ログアウト</button>
